@@ -14,7 +14,6 @@
     "webpack:watch": "webpack --watch --config webpack.dev.js",
     "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
   },
-    
   "author": "Prabhkiran Kaur",
   "license": "ISC",
   "devDependencies": {
@@ -35,5 +34,6 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "dependencies": {}
 }

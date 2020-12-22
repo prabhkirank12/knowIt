@@ -38,7 +38,7 @@ button{
     padding-right: 9px;
     border-radius: 5px;
     font-size: 20px;
-    color: #777777;
+    color: black;
     font-family: 'Andika New Basic', sans-serif;
     font-weight: 700;
 }
@@ -52,6 +52,7 @@ button{
     background-color:#dddddd;
     height: 50px;
     z-index: 1;
+    left: -10px;
 }
 
 .dropdown-btn{
@@ -67,7 +68,9 @@ button{
     display: none;
     position: absolute;
     z-index: 1;
-    margin-left: 30px;
+    right: 440px;
+    width: 60px;
+    font-weight: bold;
 }
 
 .dropdown-content a {
@@ -78,7 +81,7 @@ button{
 }
 
 .dropdown-content a:hover {
-    background-color: lightgray;
+   color: black;
 }
 .git-link {
     margin-top: 5px;
