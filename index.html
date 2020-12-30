@@ -5,10 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" sizes="30x30" type="image/png" href="dist/images/logo.png" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
-    <link rel="stylesheet" href="https://js.arcgis.com/4.17/esri/css/main.css">
-    <script src="https://js.arcgis.com/4.17/"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <title>FindIt!</title>
 </head>
 
@@ -16,24 +19,47 @@
     <!-- <script src="./dist/main.js"></script> -->
     <header>
         <div class="nav">
-            <div id="left-nav">
-                <button class="play-bttn">Play</button>
+
+            <div id="left-nav"> 
+                <h2 id="title">FindIt!</h2>
+                <!-- <img class="logo" src="dist/images/logo.png"></img> -->
             </div>
             <div id="right-nav">
+                <button id="dirs">Directions</button>
+                <button id="play-bttn">Play</button>
                 <button class="find-bttn" id="dropdown-btn">Find Me</button>
                 <div id="dropdown" class="dropdown-content">
                     <a href="https://github.com/prabhkirank12" class="git-link">Github</a>
                     <a href="https://www.linkedin.com/in/prabhkiran-kaur-a4754161/">LinkedIn</a>
+                    <a href="https://prabhkirank12.github.io/">Portfolio</a>
+                    <a href="https://angel.co/u/prabhkiran-kaur">AngleList</a>
                 </div>
             </div>
         </div>
-        <h2>FindIt!</h2>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>How to play the game</p>
+            </div>
+        
+        </div>
+
     </header>
     <div id="root">
         <div id="container">
             <div id="content"></div>
+            <div id="chartdiv"></div>
+            <div></div>
         </div>
+
     </div>
+    <footer>
+        &copy; 2020 Prabhkiran Kaur
+    </footer>
 </body>
 
 </html>
