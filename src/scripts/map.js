@@ -9,6 +9,18 @@ function globe(){
     am4core.useTheme(am4themes_animated);
     // Themes end
     
+    //color theme
+    // chart.colors.list = [
+    //   am4core.color("#845EC2"),
+    //   am4core.color("#D65DB1"),
+    //   am4core.color("#FF6F91"),
+    //   am4core.color("#FF9671"),
+    //   am4core.color("#FFC75F"),
+    //   am4core.color("#F9F871")
+    // ];
+
+
+    
     var chart = am4core.create("chartdiv", am4maps.MapChart);
     
     // Set map definition
@@ -33,11 +45,63 @@ function globe(){
     
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = am4core.color("pink");
+    // polygonTemplate.tooltipText = "{name}";
+    polygonTemplate.fill = am4core.color("lightgray");
     polygonTemplate.stroke = am4core.color("#454a58");
-    polygonTemplate.strokeWidth = 1.5;
-    
+    polygonTemplate.strokeWidth = 1.0;
+
+    //only choosing a few countries
+    var groupData = [{
+      "id": "IN",
+      "name": "India",
+      "value": 100,
+      "fill": am4core.color("#1B2DA1"),
+    }, {
+      "id": "EG",
+      "name": "Egypt",
+      "value": 50,
+      "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "CN",
+        "name": "China",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "IT",
+        "name": "Italy",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "NP",
+        "name": "Nepal",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "BR",
+        "name": "Brazil",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "PE",
+        "name": "Peru",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "US",
+        "name": "United States",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1")
+      }, {
+        "id": "TR",
+        "name": "Turkey",
+        "value": 50,
+        "fill": am4core.color("#1B2DA1"),
+      }];
+
+    groupData.forEach(
+      polygonTemplate.propertyFields.fill = "fill"
+    )
+  
     var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
     graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
     graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
@@ -48,8 +112,8 @@ function globe(){
     chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
     
     // Create hover state and set alternative fill color
-    var hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
+    // var hs = polygonTemplate.states.create("hover");
+    // hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
     
     let animation;
     setTimeout(function(){
