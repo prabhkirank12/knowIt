@@ -9,18 +9,6 @@ function globe(){
     am4core.useTheme(am4themes_animated);
     // Themes end
     
-    //color theme
-    // chart.colors.list = [
-    //   am4core.color("#845EC2"),
-    //   am4core.color("#D65DB1"),
-    //   am4core.color("#FF6F91"),
-    //   am4core.color("#FF9671"),
-    //   am4core.color("#FFC75F"),
-    //   am4core.color("#F9F871")
-    // ];
-
-
-    
     var chart = am4core.create("chartdiv", am4maps.MapChart);
     
     // Set map definition
@@ -50,71 +38,74 @@ function globe(){
     polygonTemplate.stroke = am4core.color("#454a58");
     polygonTemplate.strokeWidth = 1.0;
 
-    //only choosing a few countries
-    var groupData = [{
+    //only choosing a few countries and filling the color
+    polygonSeries.data = [{
       "id": "IN",
       "name": "India",
-      "value": 100,
       "fill": am4core.color("#1B2DA1"),
+      tooltipContent: "Taj Mahal, India"
     }, {
       "id": "EG",
       "name": "Egypt",
-      "value": 50,
-      "fill": am4core.color("#1B2DA1")
+      "fill": am4core.color("#1B2DA1"),
+      tooltipContent: "Great Pyramid of Giza, Eygpt"
       }, {
         "id": "CN",
         "name": "China",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
+        "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Great Wall of China, China"
       }, {
         "id": "IT",
         "name": "Italy",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
-      }, {
-        "id": "NP",
-        "name": "Nepal",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
+        "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Leaning Tower of Pisa, Italy"
       }, {
         "id": "BR",
         "name": "Brazil",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
+        "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Christ the Redeemer, Brazil"
       }, {
         "id": "PE",
         "name": "Peru",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
+        "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Machu Picchu, Peru"
       }, {
         "id": "US",
         "name": "United States",
-        "value": 50,
-        "fill": am4core.color("#1B2DA1")
+        "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Golden Gate Bridge, United States"
       }, {
         "id": "TR",
         "name": "Turkey",
-        "value": 50,
         "fill": am4core.color("#1B2DA1"),
+        tooltipContent: "Hagia Sophia, Turkey"
       }];
+      polygonTemplate.propertyFields.fill = "fill";
+      
+      var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
+      graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
+      graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
+      graticuleSeries.fitExtent = false;
+      
+      // Hover over text
+      polygonSeries.calculateVisualCenter = true;
+      polygonTemplate.tooltipText = "{tooltipContent}"
+      polygonTemplate.tooltipPosition = "fixed";
+      polygonTemplate.showTooltipOn = "hover";
 
-    groupData.forEach(
-      polygonTemplate.propertyFields.fill = "fill"
-    )
-  
-    var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
-    graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
-    graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
-    graticuleSeries.fitExtent = false;
-    
+      //on Click handler
+      polygonTemplate.events.on("hit", function (ev) {
+        // zoom to an object
+        ev.target.series.chart.zoomToMapObject(ev.target);
+
+        // get object info
+        console.log(ev.target.dataItem.dataContext.name);
+      });
     
     chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
     chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
     
-    // Create hover state and set alternative fill color
-    // var hs = polygonTemplate.states.create("hover");
-    // hs.properties.fill = chart.colors.getIndex(0).brighten(-0.5);
-    
+  
     let animation;
     setTimeout(function(){
       animation = chart.animate({property:"deltaLongitude", to:100000}, 20000000);
