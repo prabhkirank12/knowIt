@@ -3,7 +3,7 @@
 We know the most famous landmarks because of the hype but do we really know what the history of the landmarks is? Well knowIt helps you learn about the worlds most famous landmarks.
 
 # Functionality & MVP
-With FindIt, users will be able to:
+With knowIt, users will be able to:
 * Select a city
 * Move around on the map 
 
