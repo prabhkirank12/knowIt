@@ -1,11 +1,9 @@
-# findIt
+# knowIt
 
-FindIt is a game that will randomly drop a user anywhere on this planet and ask you to find a landmark nearby. 
-It will give hints on how close you are to the landmark. It will allows you to pick a city.
+We know the most famous landmarks because of the hype but do we really know what the history of the landmarks is? Well knowIt helps you learn about the worlds most famous landmarks.
 
 # Functionality & MVP
 With FindIt, users will be able to:
-* Start, pause, and reset the game board
 * Select a city
 * Move around on the map 
 
@@ -14,10 +12,8 @@ In addition, this project will include:
 * A productionn README
 
 # Wireframes
-This app will consist of a sinlge screen with game board, game controls, and nav links to my Github, LinkedIn and the about modal.
-Game controls will include Start, Stop and Reset buttons. 
+This app will consist of a main page with a little annimation and a another page with the major landmarks on the globe.
 
 # Architecture and Technologies
 This project will be implemented with the following technologies:
-* `Javascript` for game logic,
-* `Geolocation Api` for map
+* `Amcharts API` for the globe 
