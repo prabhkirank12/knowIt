@@ -97,7 +97,6 @@ function globe(){
       polygonTemplate.events.on("hit", function (ev) {
         // zoom to an object
         ev.target.series.chart.zoomToMapObject(ev.target);
-
         // get object info
         console.log(ev.target.dataItem.dataContext.name);
       });
