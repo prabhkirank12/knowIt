@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
 
 body{
-    background-color: white;
+    background-color: #f5f5f5;
     font-family: 'Andika New Basic', sans-serif;
     perspective: 1000px;
     overflow: hidden;
@@ -13,17 +13,6 @@ header{
     margin-bottom: 90px;
 }
 
-h2 {
-    margin-top: -20px;
-    color: #777777;
-    font-size: 40px;
-    z-index: 4;
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    margin-left: 630px;
-}
 
 button{
     margin-left: 20px;
@@ -38,7 +27,7 @@ button{
     padding-right: 9px;
     border-radius: 5px;
     font-size: 20px;
-    color: #777777;
+    color:#192DA1;
     font-family: 'Andika New Basic', sans-serif;
     font-weight: 700;
 }
@@ -52,10 +41,26 @@ button{
     background-color:#dddddd;
     height: 50px;
     z-index: 1;
+    left: -10px;
 }
 
+#left-nav{
+    display: flex;
+    align-items: center;
+    color:#192DA1;
+    font-size: 30px;
+}
+
+.logo{
+    width: 70px;
+    height: 60px;
+    transition: none;
+    position: fixed;
+}
+
+
 .dropdown-btn{
-    color: #333333;
+    color: #69607F;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -67,18 +72,20 @@ button{
     display: none;
     position: absolute;
     z-index: 1;
-    margin-left: 30px;
+    right: 440px;
+    width: 60px;
+    font-weight: bold;
 }
 
 .dropdown-content a {
-    color: #777777;;
+    color: #192DA1;;
     text-decoration: none;
     display: block;
     text-align: center;
 }
 
 .dropdown-content a:hover {
-    background-color: lightgray;
+   color: #0788D9;
 }
 .git-link {
     margin-top: 5px;
@@ -95,13 +102,20 @@ button{
 }
 
 .show {
+    font-family: Arial, Helvetica, sans-serif;
     display: block;
+    background-color: #DDDDDD;
+    width: 100px;
+    right: 315px;
+    top: 45px;
+    border-radius: 4px;
+    padding-bottom: 4px;
 }
 
 p{
     text-align: center;
     font-size: 45px;
-    color: #999999;
+    color: #192DA1;
     font-family: 'Andika New Basic', sans-serif;
     text-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
     font-weight: 700;
@@ -126,8 +140,66 @@ img {
     transform-style: preserve-3d;
     width: 40vw;
     margin: 0 auto;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 10px rgba(105, 96, 127), 0px 0px 50px rgba(105, 96, 127);
     border-radius: 5px;
 }
 
+footer {
+   position: fixed;
+   left: -8px;
+   bottom: -158px;
+   width: 100vw;
+   background-color: #DDDDDD;
+   color: #192DA1;
+   text-align: center;
 
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: -8px;
+    top: -8px;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color:#E6E8F5;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#chartdiv{
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 590px;
+    height: 590px;
+    margin: 0 auto;
+}
+
+#title {
+    cursor: pointer;
+}
