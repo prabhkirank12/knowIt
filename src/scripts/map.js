@@ -99,6 +99,8 @@ function globe(){
         ev.target.series.chart.zoomToMapObject(ev.target);
         // get object info
         console.log(ev.target.dataItem.dataContext.name);
+
+        polygonTemplate.propertyFields.fill = am4core.color(red);
       });
     
     chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
