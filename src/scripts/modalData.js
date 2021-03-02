@@ -1,4 +1,4 @@
-// import taj from "../images/taj.png";
+// import christ from "../images/taj.png";
 
 
 // function buildAssetPath(imgSrc) {
@@ -33,6 +33,7 @@ var countryData = [{
     }, {
     "id": "BR",
     "title": "Christ the Redeemer, Brazil",
+    // "image" : buildAssetPath(christ),
     "built": "Paul Landowski, Albert Caquot, Heitor da Silva Costa, Gheorghe Leonida",
     "tourist": "2 million visitors",
     "purpose": "The statue of Christ the Redeemer has become a symbolic protector of people. Like Jesus Christ, the statue protects the urban environment, like a roof over your head. Cristo Redentor is as important as any shelter. ... The Christ the Redeemer statue was designed by Brazilian engineer and architect Heitor da Silva Costa."

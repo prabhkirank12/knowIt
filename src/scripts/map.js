@@ -98,7 +98,7 @@ function globe(){
       polygonTemplate.events.on("hit", function (ev) {
         let curr = ev.target.dataItem.dataContext.id;
         let title, built, tourist, purpose = '';
-        // var myImage = new Image(100, 200);
+        // var myImage = document.createElement('img');
 
         countryData.forEach(data => {
           if (data.id === curr) {
