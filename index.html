@@ -5,34 +5,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" sizes="30x30" type="image/png" href="dist/images/logo.png" />
+    <link rel="shortcut icon" sizes="30x30" type="image/png" href="dist/images/icon-no-bkg.png" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-    <title>FindIt!</title>
+    <title>LearnIt!</title>
 </head>
 
 <body id="body">
     <!-- <script src="./dist/main.js"></script> -->
     <header>
-        <div class="nav">
+        <div id="nav" class="nav">
 
             <div id="left-nav"> 
-                <h2 id="title">FindIt!</h2>
+                <h2 id="title">LearnIt!</h2>
                 <!-- <img class="logo" src="dist/images/logo.png"></img> -->
             </div>
-            <div id="right-nav">
-                <button id="dirs">Directions</button>
-                <button id="play-bttn">Play</button>
-                <button class="find-bttn" id="dropdown-btn">Find Me</button>
-                <div id="dropdown" class="dropdown-content">
-                    <a href="https://github.com/prabhkirank12" class="git-link">Github</a>
-                    <a href="https://www.linkedin.com/in/prabhkiran-kaur-a4754161/">LinkedIn</a>
-                    <a href="https://prabhkirank12.github.io/">Portfolio</a>
-                    <a href="https://angel.co/u/prabhkiran-kaur">AngleList</a>
+            <div id="center-nav">
+                <button id="dirs">Instructions</button>
+                <button id="play-bttn">Learn</button>
+            </div>
+            <div class="right-nav">
+                <!-- Dark Mode switch -->
+                <div class="theme-switch-wrapper">
+                    <span id="toggle-icon">
+                        <span class="toggle-text">Light Mode</span>
+                        <i class="fas fa-sun"></i>
+                    </span>
+                    <label class="theme-switch">
+                        <input type="checkbox">
+                        <div class="slider round"></div>
+                    </label>
                 </div>
             </div>
         </div>
@@ -43,7 +50,7 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>How to play the game</p>
+                <p>What will you gain?</p>
             </div>
         
         </div>
@@ -58,7 +65,13 @@
 
     </div>
     <footer>
-        &copy; 2020 Prabhkiran Kaur
+        <div class="footer">
+            <a href="https://github.com/prabhkirank12" target="_blank" class="git-link"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/prabhkiran-kaur-a4754161/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+            <a href="https://prabhkirank12.github.io/" target="_blank"><i class="fas fa-laptop-code"></i></a>
+            <a href="https://angel.co/u/prabhkiran-kaur" target="_blank"><i class="fab fa-angellist"></i></a>
+            &copy; 2020 Prabhkiran Kaur
+        </div>
     </footer>
 </body>
 
