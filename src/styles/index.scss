@@ -24,17 +24,19 @@
   --nav-background: #272729;
 }
 
+/*Main page*/
 body{
     background-color: (var(--background));
     font-family: 'Andika New Basic', sans-serif;
-    perspective: 1000px;
     overflow: hidden;
+    margin: 0 auto;
+    height: 100vh;
 }
 
 header{
     display: flex;
     height: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
 
@@ -62,16 +64,14 @@ button:hover {
 }
 
 .nav{
-    margin-top: -9px;
     position: absolute;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: var(--nav-background);
     height: 50px;
     z-index: 1;
-    left: -10px;
     padding-bottom: 8px;
     padding-top: 8px;
 }
@@ -95,46 +95,12 @@ button:hover {
     position: fixed;
 }
 
-
-.dropdown-btn{
-    color: var(--secondary-color);
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    right: 440px;
-    width: 60px;
-    font-weight: bold;
-}
-
-.dropdown-content a {
-    color: var(--primary-variant);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.dropdown-content a:hover {
-   color: var(--secondary-color);
-}
 .git-link {
     margin-top: 5px;
 }
 
-
-.dropdown-btn:hover, 
-.dropdown-btn:focus, 
 .play-bttn:hover, 
-.play-bttn:focus, 
-.find-bttn:hover,
-.find-bttn:focus{
+.find-bttn:hover{
     background-color: var(--background);
 }
 
@@ -182,14 +148,11 @@ img {
 }
 
 footer {
-   position: fixed;
-   left: -8px;
-   bottom: -260px;
+   position: absolute;
    width: 100vw;
-   height: 50px;
    background-color: var(--nav-background);
    color: var(--primary-color);
-   padding-bottom: 5px;
+   bottom: -6px;
 }
 
 .footer {
@@ -204,6 +167,7 @@ footer a {
     font-size: 35px;
 }
 
+/* Modal Styling*/ 
 .modal{
     display: none;
     position: fixed;
@@ -240,6 +204,7 @@ footer a {
     cursor: pointer;
 }
 
+/* Globe div */
 #chartdiv{
     top: auto;
     left: auto;
@@ -251,7 +216,10 @@ footer a {
 
 #title {
     cursor: pointer;
+    margin-bottom: 0;
+    margin-top: 2px;
 }
+
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
   display: flex;
