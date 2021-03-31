@@ -9,7 +9,7 @@ function placeImage() {
     //the text on top of the image
     const p = document.createElement("p");
     p.classList.add('text');
-    const newContent = document.createTextNode("Do you know your landmarks?");
+    const newContent = document.createTextNode("How much do you know?");
     const currntDiv = document.getElementById("content");
     p.appendChild(newContent)
     currntDiv.appendChild(p);
