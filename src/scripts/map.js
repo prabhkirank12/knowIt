@@ -99,21 +99,21 @@ function globe(){
         let curr = ev.target.dataItem.dataContext.id;
         let title = '';
         let built = '';
+        let tourist = '';
+        let purpose = '';
         countryData.forEach(data => {
           if (data.id === curr) {
             title = data.title;
             built = data.built;
-            // console.log(title);
-            // console.log(built);
+            tourist = data.tourist;
+            purpose = data.purpose;
           }
-         return title, built;
+         return title, built, tourist, purpose;
         })
         // modalData(curr);
          chart.openModal(
-              title + 
-              " <strong>" +
-              built +
-              "</strong>"
+              "Name: ".bold().fontsize(12) + title.fontcolor("#0994FD")  + "<br>" + "Built by: ".bold() + built + "<br>" +
+              "Number of visitors per year: ".bold() + tourist + "<br>" + "Why was it built: ".bold() + purpose
           );
       });
     
