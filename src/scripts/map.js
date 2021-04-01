@@ -1,3 +1,4 @@
+import countryData from './modalData';
 
 function globe(){
 
@@ -95,12 +96,25 @@ function globe(){
 
       //on Click handler
       polygonTemplate.events.on("hit", function (ev) {
-        // zoom to an object
-        ev.target.series.chart.zoomToMapObject(ev.target);
-        // get object info
-        console.log(ev.target.dataItem.dataContext.name);
-
-        polygonTemplate.propertyFields.fill = am4core.color(red);
+        let curr = ev.target.dataItem.dataContext.id;
+        let title = '';
+        let built = '';
+        countryData.forEach(data => {
+          if (data.id === curr) {
+            title = data.title;
+            built = data.built;
+            // console.log(title);
+            // console.log(built);
+          }
+         return title, built;
+        })
+        // modalData(curr);
+         chart.openModal(
+              title + 
+              " <strong>" +
+              built +
+              "</strong>"
+          );
       });
     
     chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;

@@ -1,9 +1,11 @@
 import "./styles/index.scss";
+import "./styles/modalData.scss";
 import placeImage from "./scripts/image";
 import modal from "./scripts/modal";
 import globe from "./scripts/map";
 import home from "./scripts/title";
 import modeChange from "./scripts/modeChange";
+import modalData from "./scripts/modalData";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
     placeImage();
     modal();
     modeChange();
+    modalData;
 })
