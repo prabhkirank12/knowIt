@@ -1,5 +1,4 @@
 import "./styles/index.scss";
-import "./styles/modalData.scss";
 import placeImage from "./scripts/image";
 import modal from "./scripts/modal";
 import globe from "./scripts/map";

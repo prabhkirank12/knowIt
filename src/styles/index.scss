@@ -182,18 +182,18 @@ footer a {
 }
 
 .modal-content{
-    background-color:#E6E8F5;
+    background-color:#c0c2cf;
     margin: 15% auto;
     padding: 20px;
     width: 50%;
-    height: 50%;
+    height: 53%;
     border-radius: 4px;
 }
 
 .close{
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -203,6 +203,19 @@ footer a {
     text-decoration: none;
     cursor: pointer;
 }
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-color);
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+
 
 /* Globe div */
 #chartdiv{
@@ -306,7 +319,4 @@ input:checked + .slider::before {
 }
 
 
-/* THe Pop Ups*/
-div .modalData {
-    background: black;
-} 
+
