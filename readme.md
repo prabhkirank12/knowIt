@@ -3,6 +3,10 @@
   <img align="center" src="https://github.com/prabhkirank12/knowIt/blob/master/src/images/landmarks.png" >
 </div>
 
+<div align="center">
+  <a target="blank" href="prabhkirank12.github.io/knowit/">Live Site</a>
+</div>
+
 # Background and Overview
 We know the most famous landmarks because of the hype but do we really know what the history of the landmarks is? Well knowIt helps you learn about the worlds most famous landmarks. You will be able to see the globe with countries that have famous landmarks colored in blue. On click, you will be able to learn about the landmarks and its history. 
 
