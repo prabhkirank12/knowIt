@@ -97,23 +97,26 @@ function globe(){
       //on Click handler
       polygonTemplate.events.on("hit", function (ev) {
         let curr = ev.target.dataItem.dataContext.id;
-        let title = '';
-        let built = '';
-        let tourist = '';
-        let purpose = '';
+        let title, built, tourist, purpose = '';
+        // var myImage = new Image(100, 200);
+
         countryData.forEach(data => {
           if (data.id === curr) {
             title = data.title;
             built = data.built;
             tourist = data.tourist;
             purpose = data.purpose;
+            // myImage.src = data.image;
           }
-         return title, built, tourist, purpose;
+          return title, built, tourist, purpose;
+          // modalData(curr);
+          
         })
-        // modalData(curr);
-         chart.openModal(
-              "Name: ".bold().fontsize(12) + title.fontcolor("#0994FD")  + "<br>" + "Built by: ".bold() + built + "<br>" +
-              "Number of visitors per year: ".bold() + tourist + "<br>" + "Why was it built: ".bold() + purpose
+          chart.openModal(
+              "Name: ".bold().fontsize(4) + title.fontcolor("#0994FD").fontsize(3)  + "<br>" + 
+              "Built by: ".bold().fontsize(4) + built.fontcolor("#0994FD").fontsize(3) + "<br>" +
+              "Number of visitors per year: ".bold().fontsize(4) + tourist.fontcolor("#0994FD").fontsize(3) + "<br>" + 
+              "Why was it built: ".bold().fontsize(4) + purpose.fontcolor("#0994FD").fontsize(3)
           );
       });
     
