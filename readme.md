@@ -1,10 +1,6 @@
-<h1 align="center"> LearnIt </h1>
+<h1 align="center"> LearnIt 🌎 🛫</h1>
 <div align="center">
   <img align="center" src="https://github.com/prabhkirank12/knowIt/blob/master/src/images/landmarks.png" >
-</div>
-
-<div align="center">
-  <a target="blank" href="prabhkirank12.github.io/knowit/">Live Site</a>
 </div>
 
 # Background and Overview
