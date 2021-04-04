@@ -1,19 +1,22 @@
-# knowIt
+<h1 align="center"> LearnIt 🌎 🛫</h1>
+<div align="center">
+  <img align="center" src="https://github.com/prabhkirank12/knowIt/blob/master/src/images/landmarks.png" >
+</div>
 
-We know the most famous landmarks because of the hype but do we really know what the history of the landmarks is? Well knowIt helps you learn about the worlds most famous landmarks.
+# Background and Overview
+We know the most famous landmarks because of the hype but do we really know what the history of the landmarks is? Well, LearnIt helps you learn about the world's most famous landmarks. You will be able to see the globe with countries that have famous landmarks colored in blue. On click, you will be able to learn about the landmarks and their history. 
 
-# Functionality & MVP
-With knowIt, users will be able to:
-* Select a city
-* Move around on the map 
+# Fun Fact
+You can select your color mode either dark 🌙 or light ☀️. It will store your mode locally and next time you visit the project, your pre-selected mode will still be in effect 🤯.
 
-In addition, this project will include:
-* An about modal describing the background and rules of the game
-* A productionn README
+# Technologies Stack
+* Javasript
+* HTML/CSS
+* Amcharts API
 
 # Wireframes
 This app will consist of a main page with a little annimation and a another page with the major landmarks on the globe.
 
-# Architecture and Technologies
-This project will be implemented with the following technologies:
-* `Amcharts API` for the globe 
+## Styling 
+I used SCSS throught the project for better CSS structuring and readability. 
+
